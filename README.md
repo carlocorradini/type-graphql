@@ -14,6 +14,8 @@
 [![open collective](https://opencollective.com/typegraphql/tiers/badge.svg)](https://opencollective.com/typegraphql)
 [![install size](https://packagephobia.com/badge?p=type-graphql)](https://packagephobia.com/result?p=type-graphql)
 
+Test
+
 Create [GraphQL](https://graphql.org) schema and resolvers with [TypeScript](https://www.typescriptlang.org), using classes and decorators!
 
 **<https://typegraphql.com>**
