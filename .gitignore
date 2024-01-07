@@ -18,6 +18,9 @@
 # Sponsorkit cache
 ./images/.cache.json
 
+# TypeDoc
+./typedoc/
+
 # Environments
 .env
 

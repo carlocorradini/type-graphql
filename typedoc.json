@@ -1,0 +1,16 @@
+{
+  "entryPoints": ["src/index.ts"],
+  "out": "./typedoc",
+  "treatWarningsAsErrors": false,
+  "validation": {
+    "notExported": true
+  },
+  "plugin": ["typedoc-plugin-extras", "@droppedcode/typedoc-plugin-copy-assets"],
+  "favicon": "./images/favicon.ico",
+  "customTitle": "TypeGraphQL",
+  "customDescription": "Create GraphQL schema and resolvers with TypeScript, using classes and decorators!",
+  "footerLastModified": true,
+  "copyAssets": {
+    "copyHtmlImgTag": true
+  }
+}
