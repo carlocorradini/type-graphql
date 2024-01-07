@@ -65,10 +65,7 @@ First is the inline method using the `@Arg()` decorator. The drawback is the nee
 class RecipeResolver {
   // ...
   @Query(returns => [Recipe])
-  async recipes(
-    @Arg("servings", { defaultValue: 2 }) servings: number,
-    @Arg("title", { nullable: true }) title?: string,
-  ): Promise<Recipe[]> {
+  async recipes(@Arg("servings", { defaultValue: 2 }) servings: number, @Arg("title", { nullable: true }) title?: string): Promise<Recipe[]> {
     // ...
   }
 }

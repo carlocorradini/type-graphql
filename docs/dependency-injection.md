@@ -152,9 +152,7 @@ const server = new ApolloServer({
 
           // For developers curiosity purpose, here is the logging of current scoped container instances
           // Make multiple parallel requests to see in console how this works
-          const instancesIds = ((Container as any).instances as ContainerInstance[]).map(
-            instance => instance.id,
-          );
+          const instancesIds = ((Container as any).instances as ContainerInstance[]).map(instance => instance.id);
           console.log("Instances left in memory: ", instancesIds);
         },
       }),

@@ -172,13 +172,7 @@ By default, the `apollo-server` package from the [bootstrap guide](./bootstrap.m
               }
             }
           ],
-          "stacktrace": [
-            "Error: Argument Validation Error",
-            "    at Object.<anonymous> (/type-graphql/src/resolvers/validate-arg.ts:29:11)",
-            "    at Generator.throw (<anonymous>)",
-            "    at rejected (/type-graphql/node_modules/tslib/tslib.js:105:69)",
-            "    at processTicksAndRejections (internal/process/next_tick.js:81:5)"
-          ]
+          "stacktrace": ["Error: Argument Validation Error", "..."]
         }
       }
     }

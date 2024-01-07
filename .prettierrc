@@ -1,11 +1,8 @@
 {
-  "endOfLine": "lf",
-  "trailingComma": "all",
-  "tabWidth": 2,
-  "printWidth": 100,
+  "arrowParens": "avoid",
   "bracketSpacing": true,
   "semi": true,
   "singleQuote": false,
-  "arrowParens": "avoid",
-  "useTabs": false
+  "trailingComma": "all",
+  "plugins": ["prettier-plugin-sh"]
 }

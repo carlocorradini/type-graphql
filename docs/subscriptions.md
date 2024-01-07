@@ -83,10 +83,7 @@ class SampleResolver {
     topics: "NOTIFICATIONS",
     filter: ({ payload, args }) => args.priorities.includes(payload.priority),
   })
-  newNotification(
-    @Root() notificationPayload: NotificationPayload,
-    @Args() args: NewNotificationsArgs,
-  ): Notification {
+  newNotification(@Root() notificationPayload: NotificationPayload, @Args() args: NewNotificationsArgs): Notification {
     return {
       ...notificationPayload,
       date: new Date(),

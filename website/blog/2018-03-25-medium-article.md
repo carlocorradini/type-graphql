@@ -20,10 +20,7 @@ As I mentioned, developing a GraphQL API in Node.js with TypeScript might be a p
 At first, we create the all the schema types in SDL. We also create our data models using ORM classes, which represents our db entities. Then we start to write resolvers for our queries, mutations and fields but this force us to begin with creating TS interfaces for all arguments and inputs or even object types. And after that we can actually implements the resolvers, using weird generic signatures, e.g.:
 
 ```typescript
-export const recipesResolver: GraphQLFieldResolver<void, Context, RecipesArgs> = async (
-  _,
-  args,
-) => {
+export const recipesResolver: GraphQLFieldResolver<void, Context, RecipesArgs> = async (_, args) => {
   // stuffs like validation, auth checking, getting from container
   // and our business logic, e.g.:
   const repository = getRepository(Recipe);
@@ -113,10 +110,7 @@ class RecipeResolver {
 
   @Mutation(returns => Recipe)
   @Authorized()
-  addRecipe(
-    @Arg("newRecipeData") newRecipeData: NewRecipeInput,
-    @Ctx("user") user: User,
-  ): Promise<Recipe> {
+  addRecipe(@Arg("newRecipeData") newRecipeData: NewRecipeInput, @Ctx("user") user: User): Promise<Recipe> {
     return this.recipeService.addNew({ data: newRecipeData, user });
   }
 

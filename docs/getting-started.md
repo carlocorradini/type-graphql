@@ -83,10 +83,7 @@ class RecipeResolver {
 
   @Mutation(returns => Recipe)
   @Authorized()
-  addRecipe(
-    @Arg("newRecipeData") newRecipeData: NewRecipeInput,
-    @Ctx("user") user: User,
-  ): Promise<Recipe> {
+  addRecipe(@Arg("newRecipeData") newRecipeData: NewRecipeInput, @Ctx("user") user: User): Promise<Recipe> {
     return this.recipeService.addNew({ data: newRecipeData, user });
   }
 

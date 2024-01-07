@@ -46,10 +46,7 @@ import { GraphQLSchema, lexicographicSortSchema } from "graphql";
 import { printSchemaWithDirectives } from "@graphql-tools/utils";
 import fs from "node:fs/promises";
 
-export async function emitSchemaDefinitionWithDirectivesFile(
-  schemaFilePath: string,
-  schema: GraphQLSchema,
-): Promise<void> {
+export async function emitSchemaDefinitionWithDirectivesFile(schemaFilePath: string, schema: GraphQLSchema): Promise<void> {
   const schemaFileContent = printSchemaWithDirectives(lexicographicSortSchema(schema));
   await fs.writeFile(schemaFilePath, schemaFileContent);
 }

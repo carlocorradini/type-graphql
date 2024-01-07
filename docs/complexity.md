@@ -75,9 +75,7 @@ async function bootstrap() {
             // React to the calculated complexity,
             // like compare it with max and throw error when the threshold is reached
             if (complexity > MAX_COMPLEXITY) {
-              throw new Error(
-                `Sorry, too complicated query! ${complexity} exceeded the maximum allowed complexity of ${MAX_COMPLEXITY}`,
-              );
+              throw new Error(`Sorry, too complicated query! ${complexity} exceeded the maximum allowed complexity of ${MAX_COMPLEXITY}`);
             }
             console.log("Used query complexity points:", complexity);
           },

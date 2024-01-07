@@ -71,10 +71,7 @@ Authorized users (regardless of their roles) will be able to read data from the 
 Next, we need to create our auth checker function. Its implementation may depend on our business logic:
 
 ```ts
-export const customAuthChecker: AuthChecker<ContextType> = (
-  { root, args, context, info },
-  roles,
-) => {
+export const customAuthChecker: AuthChecker<ContextType> = ({ root, args, context, info }, roles) => {
   // Read user from context
   // and check the user's permission against the `roles` argument
   // that comes from the '@Authorized' decorator, eg. ["ADMIN", "MODERATOR"]

@@ -101,11 +101,7 @@ First, we create all the GraphQL types in `schema.graphql` using SDL. Then we cr
 Only then can we implement the resolvers using weird generic signatures and manually performing common tasks, like validation, authorization and loading dependencies:
 
 ```ts
-export const getRecipesResolver: GraphQLFieldResolver<void, Context, GetRecipesArgs> = async (
-  _,
-  args,
-  ctx,
-) => {
+export const getRecipesResolver: GraphQLFieldResolver<void, Context, GetRecipesArgs> = async (_, args, ctx) => {
   // common tasks repeatable for almost every resolver
   const repository = TypeORM.getRepository(Recipe);
   const auth = Container.get(AuthService);

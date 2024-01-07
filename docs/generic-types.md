@@ -105,9 +105,7 @@ Basically, the parameter that the `PaginatedResponse` function accepts is the va
 So if we want to return an array of strings as the `items` field, we need to add proper types to the function signature, like `GraphQLScalarType` or `String`:
 
 ```ts
-export default function PaginatedResponse<TItemsFieldValue extends object>(
-  itemsFieldValue: ClassType<TItemsFieldValue> | GraphQLScalarType | String | Number | Boolean,
-) {
+export default function PaginatedResponse<TItemsFieldValue extends object>(itemsFieldValue: ClassType<TItemsFieldValue> | GraphQLScalarType | String | Number | Boolean) {
   @ObjectType()
   abstract class PaginatedResponseClass {
     @Field(type => [itemsFieldValue])
